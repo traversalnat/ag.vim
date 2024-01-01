@@ -7,7 +7,7 @@ function! ag#coc_location_list()
     let l:locations = []
     let l:word = expand('<cword>')
     let l:word_len = strlen(l:word)
-    let l:path = expand('<cfile>:p:h')
+    let l:path = expand('<sfile>:p:h')
     let l:cmd = s:search_cmd . " " . l:word . " " . l:path
     let l:search_result = system(l:cmd)
 
